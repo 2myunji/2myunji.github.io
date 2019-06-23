@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <style>
+       html, body {
+        width: 1825px;
+    }
+
+    @font-face{src:url("font/run.ttf");
+        font-family: "run";}
+        @font-face{src:url("font/Spoqa Han Sans Regular.ttf");
+        font-family: "Spoqa";}
+
+    body{
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: rgb(253,219,191);
+        box-sizing: border-box;
+        padding: 0;
+    }
+
+    .divdiv{
+        background-image: url("images/draw.png");
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        z-index: -1;
+        padding-left: 300px;
+        padding-right: 300px;
+        height: 1080px;
+
+    }
+
+    .div1{
+        padding-top: 100px;
+        width: 100%;
+        height: 60px;
+        background-color: rgb(0,0,0,0);
+    }
+
+    .div1 p{
+        font-family: Spoqa;
+        float: left;
+        letter-spacing: 1.6px;
+        font-size: 20px;
+        line-height: 30px;
+        color: rgb(85,85,85);
+        font-weight: 900;
+        margin-bottom: 200px;
+        color: white;
+    }
+
+    .div1 .helper{
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    .div1 #menu{
+        float: right;
+        list-style: none;
+        margin: 0;
+    }
+        
+    .div1 #menu li{
+        float: left;
+        margin-left: 50px;
+        line-height: 80px;
+    }
+
+    .div1 #menu li a{
+        color: rgb(85,85,85);
+        font-size: 15px;
+        text-decoration: none;
+        font-weight: bold;
+        font-family:Spoqa;
+        color: white;
+    }
+
+    .div1 #menu li a:hover{
+        color: white;
+    }
+
+    .main-1 h1{
+        font-size: 70px;
+        color: white;
+        margin-top: 300px;
+    }
+
+    .main-1 a{
+        display: inline-block;
+        vertical-align: middle;
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px 10px;
+        border-bottom: solid 3px white;
+    }
+
+    .main-1 a:hover{
+        transition:0.5s;
+        cursor:pointer;
+        color: white;
+        background-color: black;
+    }
+
+    @-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+    @-webkit-keyframes 'slide-left'{
+        0% {
+        -webkit-transform: translateX(70px);
+        }
+        100% {
+        -webkit-transform: translateX(-30px);
+        }
+    }
+
+    #footer1{
+        font-family:Spoqa;
+        background-color: white;
+        height: 1010px;
+        padding-top: 70px;
+        padding-right: 300px;
+        padding-left: 300px;
+        position: relative;
+    }
+
+    #footer1 h1{
+        font-weight: 900;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    #footer1 h1::before{
+        content: 'ad';
+        color: rgb(0,0,0,0);
+        font-size: 8px;
+        background-color: rgb(255,102,0);
+        width: 10px;
+        height: 5px;
+        border-radius: 10px;
+        margin-right: 10px;
+        line-height: 30px;
+        vertical-align: top;
+    }
+
+    #footer1 h1:nth-child(1){
+        margin-top: 50px;
+    }
+    #footer1 p:nth-child(5){
+        margin-bottom: 50px;
+    }
+
+    #footer1>img{
+        float: left;
+        margin-top: 120px;
+        margin-left: 100px;
+        margin-right: -50px; 
+    }
+
+    #footer1 h2{
+        font-weight: 100;
+        width: 700px;
+        height: 100px;
+        font-size: 17px;
+        margin: 5px;
+    }
+
+    #footer1 h3{
+        font-size: 18px;
+    }
+
+    #footer1 p{
+        margin: 5px;
+        font-size: 17px;
+    }
+
+    .profile{
+        width: 550px;
+        float: left;
+        margin-top: 50px;
+        margin-left: 250px;
+        margin-bottom: 100px;
+    }
+
+    .skill{
+        float: left;
+        width: 600px;
+    }
+
+    .skill>h3{
+        float: left;
+        margin-left: 7px;
+        margin-right: 55px;
+    }
+
+    .skill>h3:nth-child(2){
+        float: left;
+        margin: 0;
+    }
+    .skill>h3:last-child{
+        float: left;
+        margin: 20 0 0 0;
+        text-align: center;
+    }
+
+    .skill>img{
+        float: left;
+        margin-top: 30px;
+    }
+
+    .tools{
+        float: left;
+        width: 550px;
+        margin-left: 50px;
+    }
+
+    .tools>h4{
+        font-weight: 100;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    #footer1 .circle-1{
+        position: absolute;
+        top:100px;
+        left: -100px;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background-color: rgb(255,102,0,0.8);
+    }
+
+    #footer1 .circle-2{
+        position: absolute;
+        top:200px;
+        left: 0px;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background-color: rgb(255,209,47,0.8);
+    }
+
+    #footer2{
+        background-image: url("images/snow.png");
+        font-family:Spoqa;
+        background-size: cover;
+        background-position: center center;
+        height: 1080px;
+        color: white;
+        padding-top: 20px;
+        padding-left: 300px;
+        padding-right: 300px;
+        position: relative;
+    }
+
+    #footer2>img{
+        width: 400px;
+        position: absolute;
+        top: 200px;
+        right: 360px;
+    }
+
+    #footer2>h1{
+        margin-top: 250px;
+        border-bottom: 2px solid white;
+    }
+
+    #footer2>p{
+        margin:0;
+        font-size: 50px;
+        font-weight: bold;
+    }
+
+    #footer2>h4{
+        margin-top: 80px;
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    #footer3{
+        font-family:Spoqa;
+        background-color: white;
+        height: 1080px;
+        position: relative;
+        color: rgb(85,85,85);
+        overflow: hidden;    
+    }
+
+    .container{
+        margin-left: 300px;
+        margin-right: 300px;
+    }
+
+    .container2{
+        margin-left: 300px;
+        margin-right: 300px;
+    }
+
+    .container2 h2{
+        font-size: 20px;
+        z-index: 2;
+    }
+
+    .container2 h2:nth-child(3){
+        margin-bottom:-200px;
+    }
+
+    .container>p{
+        font-size: 40px;
+        margin:0;
+        font-weight: bold;
+    }
+
+    .container2 h4{
+        margin-bottom:-20px;
+    }
+
+    .container3 h5{
+        margin-top: 350px;
+        text-align: center;
+        font-family: run;
+        font-size: 200px;
+    }
+
+    li:nth-child(2){
+        position: relative;
+    }
+
+    .jam2{
+        position: absolute;
+        top: 600px;
+        right: 200px;
+        width: 900px;
+    }
+
+    .jam{
+        width: 600px;
+        position: absolute;
+        top: 100px;
+        right: 280px;
+    }
+
+    #footer3 h1{
+        margin-top: 220px;
+        border-bottom: 1px solid rgb(85,85,85);
+    }
+
+
+    #footer3 h4{
+        margin-top: 60px;
+        font-size: 17px;
+        line-height: 30px;
+        font-weight: bold;
+    }
+
+    #footer4{
+        background-image: url("images/look.png");
+        font-family:Spoqa;
+        background-color: lavender;
+        height: 1080px;
+        padding-left: 300px;
+        padding-right: 300px;
+        padding-top: 20px;
+        text-align: right;
+        position: relative;
+    }
+
+    #footer4>img{
+        width: 630px;
+        position: absolute;
+        top: 230px;
+        left: 180px;
+    }
+
+    #footer4>h1{
+        margin-top: 250px;
+        border-bottom: 2px solid black;
+    }
+
+    #footer4>p{
+        margin:0;
+        font-size: 50px;
+        font-weight: bold;
+    }
+
+    #footer4>h4{
+        margin-top: 80px;
+        font-size: 19px;
+    }
+
+    #scroll-bar{
+        position: absolute;
+        right:8%;
+        top:40%;
+        background-color: rgb(0,0,0,0);
+        height: 300px;
+        width: 50px;
+        position: fixed;
+        z-index: 2;
+    }
+
+    .mini{
+        background-color: rgb(150,150,150);
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        margin-top:25px;
+    }
+    
+    .mini p{
+        font-size:13px;
+        color: rgb(55,55,55,0);
+        margin-left: 30px;
+        font-weight: bold;
+        font-family:Spoqa;
+        width: 150px;
+        line-height: 15px;
+    }
+
+     #footer6{
+        font-family:Spoqa;
+        height: 1100px;
+        background-image: url("images/contact.png");
+        background-size: cover;
+        color: white;
+        padding-left: 70px;
+    }
+
+    .contact-box{
+        width: 900px;
+        padding-top:250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact-box>h1{
+        font-size: 50px;
+        font-weight: 900;
+        padding: 0;
+        margin: 0;
+    }
+
+    .contact-box>h2{
+        font-size: 50px;
+        padding: 0;
+        margin-top: 10px;
+    }
+
+    .contact-box>h3{
+        font-size: 30px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .contact-box>h4{
+        font-size: 20px;
+        margin-top:30px;
+        padding: 0;
+    }
+
+    .contact-box>p{
+        text-align: center;
+        font-size: 15px;
+        margin-bottom: -40px;
+        padding-top: 60px;
+    }
+
+    ul,li{
+        list-style:none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #footer3 ul{
+        width:calc(100%*4);
+        display:flex;
+        transition:1s;
+        height: 1080px;
+        z-index: 2;
+    }
+
+    #footer3 li{
+        width:calc(100% / 4);
+    }
+
+    #footer3 li:nth-child(1){
+        position:relative;
+        background-color: rgb(255,255,255,0);
+    }
+
+    #footer3 li:nth-child(2){
+        background-color: rgb(253,219,191,0);
+    }
+    #footer3 li:nth-child(3){
+        background-color: rgb(253,219,191,0);
+    }
+    #footer3>input{
+        display:none;
+    }
+    #footer3>.bullet{
+        position:absolute;
+        bottom:100px;
+        left: 300px;
+        text-align:center;
+        z-index:2;
+    }
+
+    #footer3>.bullet label{
+        width:60px;
+        height:60px;
+        float: left;
+        line-height: 60px;
+        display:inline-block;
+        background:rgb(0,0,0,0);
+        font-size:20px;
+        font-weight: 600;
+        transition:0.5s;
+        cursor:pointer;
+    }
+
+    #pos1:checked ~ .main-2,.main-3{
+        color: rgb(0,0,0,0);
+    }
+
+    #pos1:checked ~ .main-1{
+        color: rgb(0,0,0);
+        -webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+            animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    }
+
+    #pos2:checked ~ ul{
+        margin-left:-100%;
+    }
+
+    #pos2:checked ~ .main-1,.main-3{
+        color: rgb(0,0,0,0);
+    }
+
+    #pos2:checked ~ .main-1>a{
+        font-size:0;
+        padding: 0;
+        width: 0;
+    }
+
+    #pos2:checked ~ .main-2{
+        color: rgb(0,0,0);
+        -webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+            animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    }
+
+    #pos3:checked ~ ul{
+        margin-left:-200%;
+        color: rgb(24,135,170);
+    }
+
+    #pos3:checked ~ .main-1,.main-2{
+        color: rgb(0,0,0,0);
+    }
+
+    #pos3:checked ~ .main-1>a{
+        font-size:0;
+        padding: 0;
+        width: 0;
+    }
+
+    #pos3:checked ~ .main-3{
+        color: rgb(0,0,0);
+        -webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+            animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    }
+
+    #pos1:checked ~ .bullet label:nth-child(1),
+    #pos2:checked ~ .bullet label:nth-child(2),
+    #pos3:checked ~ .bullet label:nth-child(3){
+        background:rgb(255,193,0);
+        padding-right: 30px;
+    }
+   
+    @-webkit-keyframes 'slide-left'{
+        0% {
+        -webkit-transform: translateX(70px);
+        }
+        100% {
+        -webkit-transform: translateX(-30px);
+        }
+    }
+
+    #footer5{
+        background-color: white;
+        height: 1000px;
+        text-align: center;
+        padding-top: 80px;
+        position: relative;
+        z-index: 1;
+    }
+
+    #footer5 .circle-1{
+        position: absolute;
+        top: 100px;
+        left: 0px;
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        background-color: rgb(255,102,0,0.8);
+        z-index: -1;
+    }
+
+    #footer5 .circle-2{
+        position: absolute;
+        top:200px;
+        left: -100px;
+        width: 350px;
+        height: 400px;
+        border-radius: 50%;
+        background-color: rgb(255,209,47,0.8);
+        z-index: -1;
+    }
+
+    #footer5>h1{
+        display: inline-block;
+        font-family:Spoqa;
+        font-size: 40px;
+        padding-right: 40px;
+        padding-left: 40px;
+        border-bottom: 2px solid black;
+        margin-bottom: 50px;
+    }
+    .row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image-button {
+        position: relative;
+        margin: 20px;
+        width: 230px;
+        height: 230px;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        transition: background-size 0.2s;
+    }
+
+    .image-button-overlay {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: transparent;
+        transition: background-color 0.2s;
+    }
+
+    .image-button:hover {
+        background-size: 150% 150%;
+    }
+
+    .image-button:hover > .image-button-overlay {
+        background-color: rgba(0, 0, 0, .5);
+    }
+
+    .image-button-long {
+        width: 500px;
+    }
+
+    </style>
+    <script>
+        $(document).ready(function (){
+            $("#menu-1,.mini-1").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("body").offset().top
+                }, 1000);
+            });
+        });
+
+       $(document).ready(function (){
+            $(".menu-2,.me-button").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#footer1").offset().top
+                }, 1000);
+            });
+        });
+
+       $(document).ready(function (){
+            $("#menu-3").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#footer2").offset().top
+                }, 1000);
+            });
+        });
+
+        $(document).ready(function (){
+            $(".mini-2").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#footer1").offset().top
+                }, 1000);
+            });
+        });
+
+        $(document).ready(function (){
+            $(".mini-3").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#footer2").offset().top
+                }, 1000);
+            });
+        });
+
+        $(document).ready(function (){
+            $(".mini-4").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#footer3").offset().top
+                }, 1000);
+            });
+        });
+
+        $(document).ready(function (){
+            $(".mini-5").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#footer4").offset().top
+                }, 1000);
+            });
+        });
+
+        $(document).ready(function (){
+            $(".mini-6").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#footer5").offset().top
+                }, 1000);
+            });
+        });
+
+        $(document).ready(function (){
+            $(".mini-7").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#footer6").offset().top
+                }, 1000);
+            });
+        });
+        function handleScroll () {
+            var scrollPosition = $(document).scrollTop();
+
+            $('.mini-1').css('background-color', '');
+            $('.mini-2').css('background-color', '');
+            $('.mini-3').css('background-color', '');
+            $('.mini-4').css('background-color', '');
+            $('.mini-5').css('background-color', '');
+            $('.mini-6').css('background-color', '');
+            $('.mini-7').css('background-color', '');
+            $('.mini>p').css('color','');
+
+            if (scrollPosition >= $('#footer6').offset().top) {
+                $('.mini-7').css('background-color', 'rgb(255,102,0)');
+                $('.mini-7>p').css('color','white');
+            }
+            else if (scrollPosition >= $('#footer5').offset().top) {
+                $('.mini-6').css('background-color', 'rgb(255,102,0)');
+                $('.mini-6>p').css('color','rgb(55,55,55)');
+            }
+
+            else if (scrollPosition >= $('#footer4').offset().top) {
+                $('.mini-5').css('background-color', 'rgb(255,102,0)');
+                $('.mini-5>p').css('color','rgb(55,55,55)');
+            }
+
+            else if (scrollPosition >= $('#footer3').offset().top) {
+                $('.mini-4').css('background-color', 'rgb(255,102,0)');
+                $('.mini-4>p').css('color','rgb(55,55,55)');
+            }
+
+            else if (scrollPosition >= $('#footer2').offset().top) {
+                $('.mini-3').css('background-color', 'rgb(255,102,0)');
+                $('.mini-3>p').css('color','rgb(55,55,55)');
+            }
+
+            else if (scrollPosition >= $('#footer1').offset().top) {
+                $('.mini-2').css('background-color', 'rgb(255,102,0)');
+                $('.mini-2>p').css('color','rgb(55,55,55)');
+            }
+
+            else if (scrollPosition >= $('.divdiv').offset().top) {
+                $('.mini-1').css('background-color', 'rgb(255,102,0)');
+                $('.mini-1>p').css('color','rgb(55,55,55)');
+            }}
+        
+    
+        //화면이 스크롤 될 때 마다 호출됨
+        $(window).scroll(handleScroll);
+        $(document).ready(handleScroll);
+    </script>
+</head>
+
+<body>
+    <div class="divdiv">
+        <div class="div1">
+            <div class="helper"></div>
+            <p><b>UX/UI &amp; SERVICE DESIGNER</b></p>
+            <ul id="menu">
+                <li id="menu-1"><a class="main" href="#">Home</a></li>
+                <li class="menu-2"><a class="about" href="#">About</a></li>
+                <li id="menu-3"><a class="projects" href="#">Portfolio</a></li>
+            </ul>
+        </div>
+        <div class="slide">
+            <div id="scroll-bar">
+                <div class="mini mini-1">
+                    <p>Home</p>
+                </div>
+                <div class="mini mini-2">
+                    <p>About me</p>
+                </div>
+                <div class="mini mini-3">
+                    <p>Portfolio #1</p>
+                </div>
+                <div class="mini mini-4">
+                    <p>Portfolio #2</p>
+                </div>
+                <div class="mini mini-5">
+                    <p>Portfolio #3</p>
+                </div>
+                <div class="mini mini-6">
+                    <p>Etc</p>
+                </div>
+                <div class="mini mini-7">
+                    <p>Contact</p>
+                </div>
+            </div>
+            <div class="main-1">
+                <h1>Make It<br>Special</h1>
+                <a class="me-button" href="#">About me</a>
+            </div>
+        </div>
+    </div>
+    <div id="footer1">
+        <img src="images/me.png" height="350px">
+        <div class="profile">
+            <h1>Profile</h1>
+            <p>이름 : 임현지 (1997.03.23)</p>
+            <p>주소 : 충남 계룡시 엄사면</p>
+            <p>연락처 : 010.8432.8030</p>
+            <p>E-mail : 2myun_ji@naver.com</p>
+            <h1>About Me</h1>
+            <h2>안녕하세요. 새로운 이야기를 좋아하고 이야기 속 정보를 특별하게 <br>디자인 해내는 것에
+                열정을 지닌 디자이너 임현지 입니다. <br><br>UX/UI 디자인과 서비스 디자인 프로젝트를 주로 하고 있으며,<br>
+                사람들과 긴밀히 소통하여 논리적이고 누구나 이해할 수 있는 결과물을 <br>만들어 내기 위해 노력하고 있습니다.</h2>
+        </div>
+        <div class="skill">
+            <h1>Skills</h1>
+            <div class="circle-1"></div>
+            <div class="circle-2"></div>
+            <img src="images/circle.png" height="120px">
+            <h3>UX/UI Design</h3>
+            <h3>Service Planning</h3>
+            <h3>User Research<br>+testing</h3>
+        </div>
+        <div class="tools">
+            <h1>Tools</h1>
+            <h4>Design : Photoshop, Illustrator, Sketch, Protopie, After Effects </h4>
+            <h4>Development : HTML, CSS, Processing</h4>
+            <h4>-</h4>
+        </div>
+    </div>
+    <div id="footer2">
+        <img src="images/snow-1.png">
+        <h1>Portfolio #1</h1>
+        <h2>파트너십 디자인컨텐츠 기획 및 디자인</h2>
+        <p>
+            &#60; SNOW &#62;
+        </p>
+        <h3>2018.05 ~ 2018.08</h3>
+        <h4>
+            3개월 간 약 30개의 SNOW - 타사 간의 파트너십 스티커를 기획 및 디자인하였습니다.<br>
+            파트너십 회사의 신제품 및 서비스의 장점을 부각하기 위한 스티커를 제작하기 위해,<br>
+            이슈 리서치 및 최근 트렌드 조사를 진행하는 과정을 통한 디자인을 진행하였습니다.<br><br>
+            그 결과, 직접 제작하였던 월드컵 시즌을 위한 &#60;현대자동차&#62;와의 파트너십 스티커는<br>
+            실제로 기획 디자인 그대로 앱 내에 출시되었으며, 전 세계의 SNOW 사용자들이<br>
+            월드컵 기간동안 재미있게 즐길 수 있었던 스티커가 되었습니다.
+        </h4>
+    </div>
+    <div id="footer3">
+        <input type="radio" name="pos" id="pos1" checked>
+        <input type="radio" name="pos" id="pos2">
+        <input type="radio" name="pos" id="pos3">
+        <ul>
+            <li>
+                <div class="container">
+                    <h1>Portfolio #2</h1>
+                    <h2>배리어프리 앱 서비스 기획 및 UI 디자인</h2>
+                    <p>
+                        &#60; Jam-Quest &#62;
+                    </p>
+                    <h3>2019. 06 ~ 제작 중</h3>
+                    <h4>
+                        &#60;현대 배리어프리 공모전&#62;에서 본선 진출한 &#60;Jam-Quest&#62;앱은,<br>
+                            ADHD 환자를 포함한 모든 사람들이 이용할 수 있는 '배리어프리 to-do 앱'입니다.<br><br>
+                            해당 앱 기획을 위해 실제 ADHD 환자들과의 인터뷰를 진행하고 ADHD 협회장님의 자문을 구했으며,<br>
+                            '과제'를 성취하기 위한 '보상형 TO-DO 앱'이라는 목적에 어우러질 수 있도록 <br>
+                            '게임형 UI'에 착안하여 UI 설계 및 디자인과 캐릭터 디자인을 진행하였습니다.<br><br>
+                            이 프로젝트를 통해 '어플리케이션'이라는 기존 사용자간의 물리적 장벽을 해소하고, <br>
+                            더 나아가 심리적 장벽까지 해소하여, 진정한 사회적 배리어프리를 추구하고자 합니다.
+                    </h4>
+                    <img class="jam" src="images/jam.png">
+                </div>
+            </li>
+            <li><div class="container2">
+                    <h1>Portfolio #2 - 앱 기능 소개</h1>
+                    <h2>&#60; Jam-Quest &#62;</h2>
+                    <h4>
+                        첫 번째 주요 기능인 '도전 과제'는<br>
+사용자가 달성 목표와 주기를 계획하면 그에 따른 과제를 제공합니다.<br>
+과제를 해결한 사용자는 수행한 퀘스트에 체크하고, 보상을 얻게 됩니다.<br><br></h4>
+<h2>> 목표 달성에 대한 성취 동기를 부여 받을 수 있습니다.</h2><br><br>
+<h4>두 번째 주요 기능인 '감정 일기'는<br>
+사용자 자신의 감정을 정리하여, 스스로 마음을 다룰 수 있도록<br>
+간단한 일기를 통해 하루의 감정을 기록하고 공유하게 됩니다.<br><br></h4>
+<h2>> 안정적인 자아를 형성하는 데에 도움을 제공합니다.</h2>
+                    <img class="jam2" src="images/jam-2.png">
+                </div></li>
+            <li><div class="container3">
+                    <h5>COMING<br>SOON</h5>
+                </div></li>
+        </ul>
+        <p class="bullet">
+            <label for="pos1">01</label>
+            <label for="pos2">02</label>
+            <label for="pos3">03</label>
+        </p>
+    </div>
+    <div id="footer4">
+        <img src="images/lookit.png">
+        <h1>Portfolio #3</h1>
+        <h2>유아용 실내 사고 방지 서비스 기획 및 패키지, 앱 UI 디자인</h2>
+        <p>
+            &#60; Look it up, Quack &#62;
+        </p>
+        <h3>2018. 09 ~ 2018. 11</h3>
+        <h4>&#60;Look it ip, Quack&#62;앱은 유아용 실내 사고 방지 서비스로,<br>
+            간접 경험을 통한 게임형의 '실내 위험 요소 탐색 서비스'입니다. <br><br>
+            해당 앱 기획을 위해 3-5세 어린이의 섀도잉 및 대상자 부모님들의 인터뷰를 진행하였으며, <br>
+            유아가 간접 경험을 통해 실내 위험 요소를 파악할 수 있도록 서비스를 기획하였습니다.<br>
+            또한, 3-5세의 사용자에 맞게 UI 설계 및 디자인과 캐릭터 디자인을 진행하였습니다.<br><br>
+            이 서비스를 통해 3-5세 유아들의 '실내 사고 문제'를 재미있게 해결하고자 합니다.</h4>
+    </div>
+    <div id="footer5">
+        <h1>Etc</h1>
+        <div class="row">
+            <div
+                class="image-button"
+                style="background-image: url(images/etc-1.png);">
+                <div class="image-button-overlay"></div>
+            </div>
+            <div
+                class="image-button"
+                style="background-image: url(images/etc-8.png);">
+                <div class="image-button-overlay"></div>
+            </div>
+            <div
+                class="image-button"
+                style="background-image: url(images/etc-3.png);">
+                <div class="image-button-overlay"></div>
+            </div>
+            <div
+                class="image-button"
+                style="background-image: url(images/etc-5.png);">
+                <div class="image-button-overlay"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div
+                class="image-button"
+                style="background-image: url(images/etc-9.png);">
+                <div class="image-button-overlay"></div>
+            </div>
+            <div
+                class="image-button"
+                style="background-image: url(images/etc-7.png);">
+                <div class="image-button-overlay"></div>
+            </div>
+            <div
+                class="image-button"
+                style="background-image: url(images/etc-2.png);">
+                <div class="image-button-overlay"></div>
+            </div>
+            <div
+                class="image-button"
+                style="background-image: url(images/etc-6.png);">
+                <div class="image-button-overlay"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div
+                class="image-button"
+                style="background-image: url(images/etc-10.png);">
+                <div class="image-button-overlay"></div>
+            </div>
+            <div
+                class="image-button image-button-long"
+                style="background-image: url(images/etc-4.png);">
+                <div class="image-button-overlay"></div>
+            </div>
+            <div
+                class="image-button"
+                style="background-image: url(images/etc-11.png);">
+                <div class="image-button-overlay"></div>
+            </div>
+        </div>
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+    </div>
+    <div id="footer6">
+        <div class="contact-box">
+            <h1>UX/UI &amp; SERVICE DESIGNER</h1>
+            <h2>임현지</h2>
+            <h3>010.8432.8030</h3>
+            <h3>2myun_ji@naver.com</h3>
+            <h4>"당신만의 특별함을 찾아 내는 디자이너가 되겠습니다."</h4>
+            <p>Coptrightⓒ2019.designer.임현지.All rights reserved.</p>
+            <p>본 사이트는 상업적 목적이 아닌 designer.임현지 개인포트폴리오 사이트로 제작되었습니다.<br> 일부 이미지 및 폰트 등은 그 출처가 따로 있음을 밝힙니다.</p>
+        </div>
+    </div>
+</body>
+
+</html>
